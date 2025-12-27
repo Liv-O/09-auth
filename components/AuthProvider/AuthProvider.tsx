@@ -41,7 +41,7 @@ import { useAuthStore } from '@/lib/store/authStore';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const PRIVATE_ROUTES = ['/profile', '/profile/edit', '/notes'];
+const PRIVATE_ROUTES = ['/profile', '/profile/edit', '/notes/:path*'];
 
 type Props = {
   children: React.ReactNode;
