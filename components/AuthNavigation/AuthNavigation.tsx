@@ -19,7 +19,7 @@ const AuthNavigation = () => {
     onSuccess: () => {
       console.log('Successful logout');
       clearIsAuthenticated();
-      router.push('/');
+      router.push('/sign-in');
     },
     onError: (error) => {
       const err = error as ApiError;

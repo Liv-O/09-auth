@@ -1,7 +1,7 @@
 import type { Note, NewNote } from '@/types/note';
 
 import api from '@/lib/api/api';
-import User from '@/types/user';
+import { User } from '@/types/user';
 
 interface HTTPGetResponse {
   notes: Note[];

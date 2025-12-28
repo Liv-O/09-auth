@@ -9,7 +9,7 @@ import { useAuthStore } from '@/lib/store/authStore';
 
 const EditProfile = () => {
   const router = useRouter();
-  const { user } = useAuthStore();
+  const { user, setUser } = useAuthStore();
   const [userName, setUserName] = useState<string>('');
 
   useEffect(() => {
@@ -20,7 +20,8 @@ const EditProfile = () => {
 
   const handleSaveUser = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    await updateMe({ username: userName });
+    const updatedUser = await updateMe({ username: userName });
+    setUser(updatedUser);
     router.push('/profile');
   };
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
