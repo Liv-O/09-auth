@@ -1,4 +1,4 @@
-# 🔐 09-auth
+# 🔐 NoteHub
 
 **09-auth** is a learning project built with **Next.js** that demonstrates user authentication and authorization using a modern React stack.
 
